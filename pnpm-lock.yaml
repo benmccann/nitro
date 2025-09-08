@@ -92,9 +92,6 @@ importers:
       fs-extra:
         specifier: ^11.3.0
         version: 11.3.0
-      globby:
-        specifier: ^14.1.0
-        version: 14.1.0
       gzip-size:
         specifier: ^7.0.0
         version: 7.0.0
@@ -182,6 +179,9 @@ importers:
       std-env:
         specifier: ^3.9.0
         version: 3.9.0
+      tinyglobby:
+        specifier: ^0.2.12
+        version: 0.2.13
       ufo:
         specifier: ^1.6.1
         version: 1.6.1
@@ -239,7 +239,7 @@ importers:
         version: 3.1.8(rollup@4.40.2)
       '@scalar/api-reference':
         specifier: ^1.28.33
-        version: 1.28.33(axios@1.9.0)(jwt-decode@4.0.0)(tailwindcss@4.1.6)(typescript@5.8.3)
+        version: 1.28.33(axios@1.9.0)(change-case@5.4.4)(jwt-decode@4.0.0)(tailwindcss@4.1.6)(typescript@5.8.3)
       '@types/archiver':
         specifier: ^6.0.3
         version: 6.0.3
@@ -2213,6 +2213,9 @@ packages:
   chalk@5.4.1:
     resolution: {integrity: sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+
+  change-case@5.4.4:
+    resolution: {integrity: sha512-HRQyTk2/YPEkt9TnUPbOpr64Uw3KOicFWPVBb+xiHvd6eBx/qPr9xqfBFDT8P2vWsvvz4jbEkfDe71W3VyNu2w==}
 
   changelogen@0.6.1:
     resolution: {integrity: sha512-rTw2bZgiEHMgyYzWFMH+qTMFOSpCf4qwmd8LyxLDUKCtL4T/7O7978tPPtKYpjiFbPoHG64y4ugdF0Mt/l+lQg==}
@@ -7319,7 +7322,7 @@ snapshots:
       '@sagold/json-pointer': 5.1.2
       ebnf: 1.9.1
 
-  '@scalar/api-client@2.3.33(axios@1.9.0)(jwt-decode@4.0.0)(tailwindcss@4.1.6)(typescript@5.8.3)':
+  '@scalar/api-client@2.3.33(axios@1.9.0)(change-case@5.4.4)(jwt-decode@4.0.0)(tailwindcss@4.1.6)(typescript@5.8.3)':
     dependencies:
       '@headlessui/tailwindcss': 0.2.2(tailwindcss@4.1.6)
       '@headlessui/vue': 1.7.23(vue@3.5.13(typescript@5.8.3))
@@ -7340,7 +7343,7 @@ snapshots:
       '@scalar/use-toasts': 0.7.10(typescript@5.8.3)
       '@scalar/use-tooltip': 1.0.7(typescript@5.8.3)
       '@vueuse/core': 10.11.1(vue@3.5.13(typescript@5.8.3))
-      '@vueuse/integrations': 11.3.0(axios@1.9.0)(focus-trap@7.6.4)(fuse.js@7.1.0)(jwt-decode@4.0.0)(vue@3.5.13(typescript@5.8.3))
+      '@vueuse/integrations': 11.3.0(axios@1.9.0)(change-case@5.4.4)(focus-trap@7.6.4)(fuse.js@7.1.0)(jwt-decode@4.0.0)(vue@3.5.13(typescript@5.8.3))
       focus-trap: 7.6.4
       fuse.js: 7.1.0
       microdiff: 1.5.0
@@ -7370,11 +7373,11 @@ snapshots:
       - typescript
       - universal-cookie
 
-  '@scalar/api-reference@1.28.33(axios@1.9.0)(jwt-decode@4.0.0)(tailwindcss@4.1.6)(typescript@5.8.3)':
+  '@scalar/api-reference@1.28.33(axios@1.9.0)(change-case@5.4.4)(jwt-decode@4.0.0)(tailwindcss@4.1.6)(typescript@5.8.3)':
     dependencies:
       '@floating-ui/vue': 1.1.6(vue@3.5.13(typescript@5.8.3))
       '@headlessui/vue': 1.7.23(vue@3.5.13(typescript@5.8.3))
-      '@scalar/api-client': 2.3.33(axios@1.9.0)(jwt-decode@4.0.0)(tailwindcss@4.1.6)(typescript@5.8.3)
+      '@scalar/api-client': 2.3.33(axios@1.9.0)(change-case@5.4.4)(jwt-decode@4.0.0)(tailwindcss@4.1.6)(typescript@5.8.3)
       '@scalar/code-highlight': 0.0.29
       '@scalar/components': 0.13.58(typescript@5.8.3)
       '@scalar/icons': 0.3.6(typescript@5.8.3)
@@ -8061,13 +8064,14 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
-  '@vueuse/integrations@11.3.0(axios@1.9.0)(focus-trap@7.6.4)(fuse.js@7.1.0)(jwt-decode@4.0.0)(vue@3.5.13(typescript@5.8.3))':
+  '@vueuse/integrations@11.3.0(axios@1.9.0)(change-case@5.4.4)(focus-trap@7.6.4)(fuse.js@7.1.0)(jwt-decode@4.0.0)(vue@3.5.13(typescript@5.8.3))':
     dependencies:
       '@vueuse/core': 11.3.0(vue@3.5.13(typescript@5.8.3))
       '@vueuse/shared': 11.3.0(vue@3.5.13(typescript@5.8.3))
       vue-demi: 0.14.10(vue@3.5.13(typescript@5.8.3))
     optionalDependencies:
       axios: 1.9.0
+      change-case: 5.4.4
       focus-trap: 7.6.4
       fuse.js: 7.1.0
       jwt-decode: 4.0.0
@@ -8493,6 +8497,9 @@ snapshots:
       supports-color: 7.2.0
 
   chalk@5.4.1: {}
+
+  change-case@5.4.4:
+    optional: true
 
   changelogen@0.6.1(magicast@0.3.5):
     dependencies:
